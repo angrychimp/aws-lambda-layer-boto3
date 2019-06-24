@@ -1,0 +1,11 @@
+# S3 bucket for temporary ZIP storage
+BUCKET_NAME = my-aws-lambda-layer-bucket
+
+# Name for your Lambda layer
+LAYER_NAME = boto3-latest
+
+# Runtime environments supported by your layer
+RUNTIMES = python3.6 python3.7
+
+# Optional pinned version for boto3
+#BOTO3_VERSION = 1.9.174

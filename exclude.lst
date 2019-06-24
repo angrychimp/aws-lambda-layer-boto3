@@ -1,0 +1,6 @@
+*.dist-info*
+*/__pycache__/*
+*easy_install.py
+*pip*
+*pkg_resources*
+*setuptools*
