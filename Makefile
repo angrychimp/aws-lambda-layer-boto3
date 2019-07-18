@@ -6,7 +6,7 @@ BUCKET_NAME ?= lambda-layer-build-bucket
 LAYER_NAME ?= boto3-layer
 RUNTIMES ?= python3.6 python3.7
 BOTO3_VERSION ?= $(shell curl -s https://pypi.org/pypi/boto3/json | python -c "from __future__ import print_function; import sys; import json; print(json.loads(sys.stdin.read())['info']['version'])")
-REQUIRE_REBUILD := $(shell [ -z $(docker image ls | grep build-boto3-randy-layer) ] && echo build-image)
+REQUIRE_REBUILD := $(shell [ -z $(docker image ls | grep build-$(LAYER_NAME)-layer) ] && echo build-image)
 
 $(LAYER_NAME).zip: build
 
